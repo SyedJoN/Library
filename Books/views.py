@@ -6,14 +6,6 @@ from random import randint
 # Create your views here.
 
 def index(request):
-    user = m_User.objects.create(
-        first_name = 'Murtaza',
-        last_name = 'Mustafa',
-        username = 'SantaDud',
-        password = 'spiderman5152',
-    )
-    user.is_superuser = True
-    user.save()
     numberOfBooks = m_Book.objects.count()
     first = m_Book.objects.first().pk
     bookIds = []

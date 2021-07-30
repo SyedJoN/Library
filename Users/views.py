@@ -11,7 +11,9 @@ def signup(request):
     if request.method == 'POST':
         form = User(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save(commit=False)
+            user.is_superuser = True
+            user.save()
             messages.success(request, f'Account created for {form.cleaned_data.get("first_name")}')
             return redirect('index')
     else:
