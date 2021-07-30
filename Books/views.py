@@ -32,6 +32,11 @@ def search(request):
         "books": m_Book.objects.filter(title__icontains = searchText)
     })
 
+def favorites(request, user_name):
+    user = m_User.objects.get(username=user_name)
+    books = user.favorites.all()
+    return render(request, 'Books/favorites.html', {'books': books})
+    
 def addToFav(request, user_name, book_id):
     user = m_User.objects.get(username = user_name)
     user_books = user.favorites.all()

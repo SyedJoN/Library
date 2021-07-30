@@ -16,7 +16,3 @@ def signup(request):
         form = User()
     return render(request, 'Users/signup.html', {'form': form })
 
-def favorites(request, user_name):
-    user = m_User.objects.get(username=user_name)
-    books = user.favorites.all()
-    return render(request, 'Users/favorites.html', {'books': books})

@@ -6,4 +6,5 @@ urlpatterns =[
     path("<int:book_id>", views.book, name='book'),
     path("search", views.search, name='search'),
     path("<str:user_name><int:book_id>/added", views.addToFav, name='addToFav'),
+    path('<str:user_name>', views.favorites, name='favorites')
 ]
