@@ -1,0 +1,12 @@
+{% extends 'Books/layout.html' %}
+{% load static %}
+
+{% block body %}
+<h1>Successfully Logged Out.</h1>
+<div class="pt-2 margin-lb">
+    <small>
+        Login Again? <a class="nav-item" style="font-size: 0.95rem;" href="{% url 'login' %}">Sign In</a>
+    </small>
+</div>
+
+{% endblock %}

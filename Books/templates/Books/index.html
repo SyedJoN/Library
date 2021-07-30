@@ -1,0 +1,15 @@
+{%extends "Books/layout.html"%}
+{% load static %}
+{%block body%}
+
+{% include 'Books/carousal.html' %}
+
+{% for book in books %}
+
+<a href="{% url 'book' book.id %}" class="indexBooks">
+    <img src={{book.cover}} class="indexCovers">
+    <span class='indexTitles'><span>{{book.title}}</span></span> 
+</a>
+
+{% endfor %}
+{%endblock%}

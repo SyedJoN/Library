@@ -1,0 +1,19 @@
+{% extends "Books/layout.html" %}
+{% block body %}
+
+{% if books %}
+{% for book in books %}
+
+<a href="{% url 'book' book.id %}" class="searchBooks">
+    <img src={{book.cover}} class="searchCovers">
+    <span class='searchTitles'>{{book.title}}</span> 
+</a>
+
+{% endfor %}
+
+{% else %}
+
+<h1 class="border-bottom border-top s-spc">No search results.</h1>
+
+{% endif %}
+{% endblock %}

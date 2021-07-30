@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body,html{
+    height: 100%;
+    margin: 1.2em 0 0 0;
+    font-family: 'Nunito', sans-serif;
+    color:brown;
+}
+
+/*Random*/
+.margin-lb{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.border-bottom{
+    border-color: brown !important;
+}
+
+.border-top{
+    border-color: brown !important;
+}
+
+.s-spc{
+    margin: 5.8rem;
+    padding: 5rem;
+}
+
+/*END Random*/
+
+/* Navbar CSS*/
+
+a[id='navLogo'] img{
+    width: 100px;
+    height: 80px;
+}
+
+.btn-fav{
+    margin-left: 2em;
+    font-size: 1.2rem !important;
+    text-decoration: none !important;
+    color: brown !important;
+    border: 2px solid brown;
+}
+
+.form-control, .form-control:enabled, .form-control:focus{
+    background-color: #d6bb92 !important;
+    color: rgb(136, 89, 28) !important;
+    border-color: burlywood !important;
+}
+
+input.form-control.me-2:-webkit-autofill {
+    transition: background-color 50000s ease-in-out 0s!important;
+}
+
+/*Log In Btn*/
+.nav-item{
+    text-align: center;
+    width:fit-content;
+    height: fit-content;
+    margin:0 1rem 0 0;
+    font-size: 1rem;
+    color: brown;
+}
+
+.nav-link{
+    color:brown;
+    padding:0;
+    text-decoration: underline;
+}
+
+.btn-ul{
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav-link:hover, .nav-link:focus{
+    color:brown;
+    font-weight:bolder;
+}
+
+.btn-success{
+    border-style: none;
+    background-color: brown;
+    color: rgb(2, 2, 1);
+}
+
+.btn-success:hover, .btn-success:focus{
+    background-color:rgb(112, 22, 22);
+    color:white;
+    cursor: pointer;
+}
+/*END of Login Btn*/
+
+/* END Navbar CSS*/
+
+
+/*Form Input Fields*/
+
+input.textinput.textInput.form-control:-webkit-autofill {
+    transition: background-color 5000000s ease-in-out 0s!important;
+}
+
+input.emailinput.form-control:-webkit-autofill {
+    transition: background-color 5000000s ease-in-out 0s!important;
+}
+
+.helptext{
+    display: none;
+}
+
+/*END Form Input Fields*/
+
+/*Index Books*/
+.searchCovers, .indexCovers{
+    width: 220px;
+    height: 350px;
+}
+
+a[class=indexBooks], a[class=searchBooks]{
+    display: inline-block;
+    width:220px;
+    height:350px;
+    margin: 4em 1.5em 4em 1.5em;
+    transform: translateX(3em);
+}
+
+span[class=indexTitles], span[class=searchTitles]{
+    display: inline-block;
+    color:brown;
+    text-overflow: clip;
+    text-decoration: none;
+    width: 220px;
+    border-radius: 0.5em;
+    padding: 0.2em;
+    text-align: center;
+    background-color: rgba(246, 217, 172, 0.4);
+    transform: translate(-0.2em, 0.5em);
+}
+
+span[class=indexTitles]:hover, span[class=searchTitles]:hover{
+    text-decoration:underline;
+    font-weight: bold;
+}
+
+#r-form{
+    margin-left: 2rem;
+}
+
+.carousalCovers{
+    margin: auto;
+    width: 33%;
+    height: 700px;
+}
+
+/*END Index Books*/
+
+/*Footer Start*/
+
+.footer-container{
+    box-sizing: border-box;
+    padding: 1rem 0 1rem 0;
+    background-color:rgb(228, 191, 144);
+}
+
+footer{
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(228, 191, 144);
+    color:chocolate;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-heading{
+    display: flex;
+    flex-direction: column;
+    margin: 0 4rem 0rem 4rem;
+}
+
+.footer-heading h2{
+    color: brown;
+    font-weight: bolder;
+}
+
+.footer-heading a{
+    text-align: center;
+    text-decoration: none;
+    color: chocolate;
+}
+
+.footer-heading a:hover{
+    font-weight: bolder;
+    color:brown;
+    transition: 0.3s ease-out;
+}
+
+@media screen and (max-width: 660px){
+    .footer-3{
+        display: none;
+    }
+    .footer-heading{
+        margin: 0 2rem 2rem 2rem; 
+    }
+}
+
+@media screen and (max-width: 1070px){
+    .footer-heading{
+        margin: 0 2rem 2rem 2rem; 
+    }
+}
+
+/*Footer End*/

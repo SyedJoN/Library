@@ -1,0 +1,23 @@
+{% extends 'Books/layout.html' %}
+{% load static %}
+
+{% block body %}
+
+    {% if books %}
+        <h1 class="border-bottom" style="text-align: center;">Favorites</h1>
+        {% for book in books %}
+
+            <a href="{% url 'book' book.id %}" class="searchBooks">
+                <img src={{book.cover}} class="searchCovers">
+                <span class='searchTitles'>{{book.title}}</span> 
+            </a>
+
+        {% endfor %}
+
+        {% else %}
+
+            <h1 class="border-bottom border-top s-spc">No Favorites Found.</h1>
+
+    {% endif %}
+
+{% endblock %}

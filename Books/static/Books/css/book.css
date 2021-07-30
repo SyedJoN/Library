@@ -1,0 +1,26 @@
+.bookCovers{
+    width: 350px;
+    height: 500px;
+    margin: 2em 0 1.5em 3em;
+}
+
+div[class=bookContent]{
+    color:brown;
+    width: 600px;
+    padding: 0.5em 1em 0.5em 1.2em;
+    background-color: rgba(211, 189, 149, 0.9);
+    border-radius: 0.5em;
+    transform: translate(30em, -33em);
+}
+
+div[class=bookContent] span{
+    font-size: large;
+    font-weight: bolder;
+}
+
+.d-btn{
+    border: 1px solid brown;
+    text-decoration: none;
+    padding: 0.5rem 1rem 0.5rem 1rem !important;
+    margin-bottom: 2rem;
+}
