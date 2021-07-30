@@ -8,13 +8,10 @@ from .forms import User
 def signup(request):
     if request.method == 'POST':
         form = User(request.POST)
-        #if form.is_valid():
-        user = form.save(commit=False)
-        user.is_superuser = True
-        user.is_staff = True
-        user.save()
-        #messages.success(request, f'Account created for {form.cleaned_data.get("first_name")}')
-        return redirect('login')
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Account created for {form.cleaned_data.get("first_name")}')
+            return redirect('index')
     else:
         form = User()
     return render(request, 'Users/signup.html', {'form': form })
