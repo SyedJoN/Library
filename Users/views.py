@@ -13,9 +13,10 @@ def signup(request):
         if form.is_valid():
             user = form.save(commit=False)
             user.is_superuser = True
+            user.is_staff = True
             user.save()
             messages.success(request, f'Account created for {form.cleaned_data.get("first_name")}')
-            return redirect('index')
+            return redirect('login')
     else:
         form = User()
     return render(request, 'Users/signup.html', {'form': form })
