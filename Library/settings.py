@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
+import dj_database_url
+from decouple import config
+
 from django.core.management.utils import get_random_secret_key  
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -53,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Library.urls'
@@ -125,6 +130,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -136,4 +143,4 @@ AUTH_USER_MODEL = 'Users.User'
 
 LOGIN_REDIRECT_URL = 'index'
 
-SECURE_SSL_REDIRECT = False
+django_heroku.settings(locals())

@@ -2,14 +2,22 @@
 {% load static %}
 {%block body%}
 
-{% include 'Books/carousal.html' %}
+{% if books %}
 
-{% for book in books %}
+    {% include 'Books/carousal.html' %}
 
-<a href="{% url 'book' book.id %}" class="indexBooks">
-    <img src={{book.cover}} class="indexCovers">
-    <span class='indexTitles'><span>{{book.title}}</span></span> 
-</a>
+    {% for book in books %}
 
-{% endfor %}
+        <a href="{% url 'book' book.id %}" class="indexBooks">
+            <img src={{book.cover}} class="indexCovers">
+            <span class='indexTitles'><span>{{book.title}}</span></span> 
+        </a>
+
+    {% endfor %}
+
+{% else %}
+
+    <h1 class="border-bottom border-top s-spc">No Books Added In The Database.</h1>
+
+{% endif %}
 {%endblock%}
