@@ -13,7 +13,7 @@
           <a class="nav-link btn-fav" aria-current="page" href="{% url 'issuedBooks' user.username %}">Issued Books</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Amount Owed: Rs. {{user.fine}}</a>
+          <a class="nav-link disabled owed-text" href="#" tabindex="-1" aria-disabled="true">Amount Owed: Rs. {{user.fine}}</a>
         </li>
       </ul>
     </div>
