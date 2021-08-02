@@ -61,7 +61,7 @@ input.form-control.me-2:-webkit-autofill {
 
 @media (max-width: 992px){
     
-.navbar-expand-lg .navbar-nav .nav-link {
+.navbar-expand .navbar-nav .nav-link {
     padding-right: .5rem;
     padding-left: .5rem;
 }
@@ -87,7 +87,7 @@ input.form-control.me-2:-webkit-autofill {
     flex-direction: row;
     justify-content: flex-end;
 }
-.navbar-light .navbar-nav .nav-link {
+a.nav-link.btn-fav {
     white-space: nowrap;
 }
 
@@ -225,6 +225,18 @@ footer{
 @media screen and (max-width: 1070px){
     .footer-heading{
         margin: 0 2rem 2rem 2rem; 
+    }
+}
+@media screen and (max-width: 720px){
+        form.d-flex.search {
+            margin-bottom: 178px;
+            margin-left: -200px;
+    }
+}
+@media screen and (max-width: 552px){
+        form.d-flex.search {
+            margin-bottom: 178px;
+            margin-left: -459px;
     }
 }
 
