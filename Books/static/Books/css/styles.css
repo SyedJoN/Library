@@ -7,6 +7,12 @@ body,html{
     color:brown;
 }
 
+.booksContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /*Random*/
 .margin-lb{
     margin-left: 2rem;
@@ -51,6 +57,14 @@ a[id='navLogo'] img{
 
 input.form-control.me-2:-webkit-autofill {
     transition: background-color 50000s ease-in-out 0s!important;
+}
+
+@media (max-width: 992px){
+    
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
 }
 
 /*Log In Btn*/
@@ -122,7 +136,6 @@ a[class=indexBooks], a[class=searchBooks]{
     width:220px;
     height:350px;
     margin: 4em 1.5em 4em 1.5em;
-    transform: translateX(3em);
 }
 
 span[class=indexTitles], span[class=searchTitles]{
@@ -135,7 +148,8 @@ span[class=indexTitles], span[class=searchTitles]{
     padding: 0.2em;
     text-align: center;
     background-color: rgba(246, 217, 172, 0.4);
-    transform: translate(-0.2em, 0.5em);
+    margin-bottom: 1em;
+    transform: translateY(0.5em);
 }
 
 span[class=indexTitles]:hover, span[class=searchTitles]:hover{
@@ -149,7 +163,7 @@ span[class=indexTitles]:hover, span[class=searchTitles]:hover{
 
 .carousalCovers{
     margin: auto;
-    width: 33%;
+    width: 500px;
     height: 700px;
 }
 

@@ -5,16 +5,16 @@
 {% if books %}
 
     {% include 'Books/carousal.html' %}
+    <div class="booksContainer">
+        {% for book in books %}
 
-    {% for book in books %}
+            <a href="{% url 'book' book.id %}" class="indexBooks">
+                <img src={{book.cover}} class="indexCovers">
+                <span class='indexTitles'><span>{{book.title}}</span></span> 
+            </a>
 
-        <a href="{% url 'book' book.id %}" class="indexBooks">
-            <img src={{book.cover}} class="indexCovers">
-            <span class='indexTitles'><span>{{book.title}}</span></span> 
-        </a>
-
-    {% endfor %}
-
+        {% endfor %}
+    </div>
 {% else %}
 
     <h1 class="border-bottom border-top s-spc">No Books Added In The Database.</h1>

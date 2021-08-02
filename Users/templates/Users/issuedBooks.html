@@ -1,0 +1,24 @@
+{% extends 'Books/layout.html' %}
+{% load static %}
+
+{% block body %}
+
+    {% if books %}
+        <h1 class="border-bottom" style="text-align: center;">Issued Books</h1>
+        <div class="booksContainer">
+            {% for book in books %}
+
+                <a href="{% url 'book' book.id %}" class="searchBooks">
+                    <img src=/{{book.cover}} class="searchCovers">
+                    <span class='searchTitles'>{{book.title}}</span> 
+                </a>
+
+            {% endfor %}
+        </div>
+        {% else %}
+
+            <h1 class="border-bottom border-top s-spc">You have not been issued any books.</h1>
+
+    {% endif %}
+
+{% endblock %}

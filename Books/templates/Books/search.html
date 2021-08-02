@@ -2,6 +2,7 @@
 {% block body %}
 
 {% if books %}
+<div class="booksContainer">
 {% for book in books %}
 
 <a href="{% url 'book' book.id %}" class="searchBooks">
@@ -10,7 +11,7 @@
 </a>
 
 {% endfor %}
-
+</div>
 {% else %}
 
 <h1 class="border-bottom border-top s-spc">No search results.</h1>

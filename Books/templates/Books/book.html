@@ -10,6 +10,9 @@
     <div class="author"><span>Author:</span><br>{{book.author}}</div><br>
     <div class="description"><span>Description:</span><br>{{book.description}}</div><br>
     <p class="isbn"><span>ISBN:</span><br>{{book.ISBN}}</p><br>
+    {% if book.issuedTo%}
+        <p class="isbn"><span>Currently Issued By:</span><br>{{book.issuedTo.username}}</p><br>
+    {% endif %}
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
             <a class="nav-link d-btn" href="{{book.bookPDF}}" target="_blank">Open Book</a>
@@ -17,6 +20,15 @@
         {% if user.is_authenticated %}
             <li class="nav-item">
                 <a class="nav-link d-btn" href="{% url 'addToFav' user.username book.id %}">Add to Favorites</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-btn" href="{% url 'remFromFav' user.username book.id %}">Remove From Favorites</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-btn" href="{% url 'addToIssued' book.id user.username %}">Get Book</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-btn" href="{% url 'remFromIssued' user.username book.id  %}">Return Book</a>
             </li>
         {% endif %}
     </ul>
