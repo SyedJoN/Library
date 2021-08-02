@@ -87,6 +87,9 @@ input.form-control.me-2:-webkit-autofill {
     flex-direction: row;
     justify-content: flex-end;
 }
+.navbar-light .navbar-nav .nav-link {
+    white-space: nowrap;
+}
 
 .nav-link:hover, .nav-link:focus{
     color:brown;
