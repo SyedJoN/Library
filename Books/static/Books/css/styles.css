@@ -61,7 +61,7 @@ input.form-control.me-2:-webkit-autofill {
 
 @media (max-width: 992px){
     
-.navbar-expand .navbar-nav .nav-link {
+.navbar-expand .navbar-nav-sm .nav-link {
     padding-right: .5rem;
     padding-left: .5rem;
 }
@@ -239,5 +239,12 @@ footer{
             margin-left: -459px;
     }
 }
+@media screen and (max-width: 550px){
+        .owed-text {
+            margin-top: 51px;
+            margin-left: -263px;
+    }
+}
+
 
 /*Footer End*/
